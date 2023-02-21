@@ -2,7 +2,7 @@
   "Author": "doggjoe9",
   "Name": "Not My Party",
   "Punchline": "Eliminate unwanted party finder entries.",
-  "Description": "Eliminate unwanted party finder entries. Type /nmp to bring up the config window and adjust to your liking. Open the context menu on a party finder listing to manually hide it/filter for it.",
+  "Description": "Eliminate unwanted party finder entries. Type /nmp to bring up the config window and adjust to your liking. Open the context menu on a party finder listing to manually hide it/filter for it. Party finder needs to be refreshed for filtering changes to take effect. Note that this plugin can only filter one page at a time due to how party finder works, so you will still need to manually navigate through the pages if there are more than 50 in your current category/search conditions.",
   "InternalName": "NotMyParty",
   "ApplicableVersion": "any",
   "Tags": [
