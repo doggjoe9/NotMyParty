@@ -1,0 +1,13 @@
+{
+  "Author": "doggjoe9",
+  "Name": "Not My Party",
+  "Punchline": "Eliminate unwanted party finder entries.",
+  "Description": "Eliminate unwanted party finder entries. Type /nmp to bring up the config window and adjust to your liking. Open the context menu on a party finder listing to manually hide it/filter for it.",
+  "InternalName": "NotMyParty",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "Social",
+    "UI",
+    "Utility"
+  ]
+}
