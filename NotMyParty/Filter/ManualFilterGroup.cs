@@ -1,11 +1,5 @@
 ﻿using Dalamud.Game.Gui.PartyFinder.Types;
-using Dalamud.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
 
 namespace NotMyParty.Filter {
 	internal class ManualFilterGroup : GenericFilterGroup {

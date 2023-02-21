@@ -4,7 +4,6 @@ using Dalamud.Game.Gui;
 using Dalamud.Game.Gui.PartyFinder;
 using Dalamud.IoC;
 using Dalamud.Plugin;
-using System.Runtime.CompilerServices;
 
 namespace NotMyParty {
 	internal class Services {

@@ -1,11 +1,6 @@
 ﻿using Dalamud.Game.Gui.PartyFinder.Types;
 using ImGuiNET;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace NotMyParty.Filter {
 	internal class CustomRegexFilterGroup : GenericFilterGroup {
