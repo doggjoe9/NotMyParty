@@ -20,7 +20,7 @@ namespace NotMyParty.Filter {
 		}
 
 		public override void DrawConfiguration() {
-			if (ImGui.Button((HideInstead ? "Hide" : "Filter for") + "##" + PlainTextIdentifier))
+			if (ImGui.Button((HideInstead ? "Hide" : "Filter") + "##" + PlainTextIdentifier))
 				HideInstead = !HideInstead;
 			ImGui.SameLine();
 			ImGui.Text("using the following regular expression: ");
