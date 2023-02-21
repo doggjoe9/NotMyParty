@@ -1,0 +1,21 @@
+[
+  {
+    "Author": "doggjoe9",
+    "Name": "Not My Party",
+    "Punchline": "Eliminate unwanted party finder entries.",
+    "Description": "Eliminate unwanted party finder entries. Type /nmp to bring up the config window and adjust to your liking. Open the context menu on a party finder listing to manually hide it/filter for it.",
+    "InternalName": "NotMyParty",
+    "AssemblyVersion": "1.0.0.0",
+    "RepoUrl": "https://github.com/doggjoe9/NotMyParty",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 7,
+    "DownloadLinkInstall": "https://github.com/doggjoe9/NotMyParty/releases/latest/download/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/doggjoe9/NotMyParty/releases/latest/download/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/doggjoe9/NotMyParty/releases/latest/download/latest.zip",
+    "DownloadCount": 0,
+    "LastUpdated": "1676964831",
+    "Changelog": "Initial release."
+  }
+]
