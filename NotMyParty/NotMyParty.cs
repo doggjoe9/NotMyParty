@@ -26,7 +26,7 @@ namespace NotMyParty {
 			new CustomRegexFilterGroup(false),
 		};
 
-		private bool[] enabledFlags;
+		private readonly bool[] enabledFlags;
 		
 		private readonly GameObjectContextMenuItem hideContextMenu;
 		private readonly GameObjectContextMenuItem filterContextMenu;
@@ -54,8 +54,6 @@ namespace NotMyParty {
 			Services.ContextMenu.OnOpenGameObjectContextMenu += OpenContextMenuOverride;
 			Services.ChatGui.ChatMessage += ChatMessageOverride;
 			Services.PluginInterface.UiBuilder.OpenConfigUi += OpenUI;
-			Services.PluginInterface.UiBuilder.ShowUi += OpenUI;
-			Services.PluginInterface.UiBuilder.HideUi += HideUI;
 			Services.PluginInterface.UiBuilder.Draw += DrawUI;
 		}
 
@@ -68,10 +66,7 @@ namespace NotMyParty {
 			Services.Configuration.Save();
 			DisposeAll();
 			Services.PluginInterface.UiBuilder.OpenConfigUi -= OpenUI;
-			Services.PluginInterface.UiBuilder.ShowUi -= OpenUI;
-			Services.PluginInterface.UiBuilder.HideUi -= HideUI;
 			Services.PluginInterface.UiBuilder.Draw -= DrawUI;
-			HideUI();
 			Services.ChatGui.ChatMessage -= ChatMessageOverride;
 			Services.PartyFinderGui.ReceiveListing -= OnPartyFinderListingOverride;
 			Services.CommandManager.RemoveHandler(CommandName);
@@ -81,10 +76,6 @@ namespace NotMyParty {
 
 		private void OpenUI() {
 			config = !config;
-		}
-
-		private void HideUI() {
-			config = false;
 		}
 
 		#region UI
@@ -130,10 +121,7 @@ namespace NotMyParty {
 		}
 
 		private void OnCommandConfig() {
-			if (config)
-				HideUI();
-			else
-				OpenUI();
+			OpenUI();
 		}
 
 		/// <summary>
@@ -186,7 +174,7 @@ namespace NotMyParty {
 		private void ChatMessageOverride(XivChatType type, uint senderId, ref SeString sender, ref SeString message, ref bool isHandled) {
 			if (debug) {
 				foreach (Payload payload in message.Payloads) {
-					PluginLog.Debug(payload.ToString());
+					PluginLog.Debug(payload.ToString() ?? "error: Unable to convert payload into string.");
 				}
 			}
 		}
